@@ -15,7 +15,7 @@ function Landing() {
                 <section className="home" id="home">
                     <div className="home__container bd-container bd-grid">
                         <div className="home__data">
-                            <h2 className="home__subtitle">Your Doc,<br /> A Click Away</h2>
+                            <h2 className="home__subtitle">We are thinking,<br /> "Health First"</h2>
                             <p >It’s <b>easier</b> to <b>access</b> your
                                 <b>doctor</b> or <b>medical</b> records this way and keep up with your
                                 <b>medical health</b>. The worst case scenario is dying alone when
@@ -35,7 +35,7 @@ function Landing() {
                     <div className="about__container  bd-grid">
                         <div className="about__data">
                             <span className="section-subtitle about__initial">About us</span>
-                            <h2 className="section-title about__initial">We are Thinking, <br /> "Health First"</h2>
+                            <h2 className="section-title about__initial">Your Doctor is, <br /> a Click away</h2>
                             <p className="about__description"><b>SafeDoc</b> is a system that allows you to
                                 request for medical attention in case of an emergency. Medical
                                 practitioners within your area can come in to help in a timely

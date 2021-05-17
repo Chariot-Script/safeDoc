@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Landing from './Pages/Landing';
+import Pharmacy from './Pages/Pharmacy';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Contact from './Pages/Contact';
@@ -18,6 +19,7 @@ function App() {
                 <AuthProvider>
                     <Switch>
                         <Route path="/" exact component={Landing} />
+                        <Route path="/pharmacy" component={Pharmacy} />
                         <Route path="/login" component={Login} />
                         <Route path="/register" component={Register} />
                         <Route path="/contact" component={Contact} />

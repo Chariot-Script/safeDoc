@@ -10,7 +10,6 @@ function Terms() {
             <Header />
             <section className="services section bd-container services__content" id="services">
                 <h2 className="section-title">General Terms Of Service</h2>
-                <p />
                 <span className="section-sub">Effective May 1, 2021</span>
                 <br />
                 Welcome, and thank you for visiting safeDoc. safeDoc will be

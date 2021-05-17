@@ -10,7 +10,6 @@ function Privacy() {
             <Header />
             <section class="services section bd-container services__content" id="services">
                 <h2 class="section-title">Privacy Policy</h2>
-                <p />
                 <span class="section-sub">Effective May 1, 2021</span>
                 <br />
                 Please note that by accepting our Terms of Service and using this

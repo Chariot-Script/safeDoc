@@ -9,7 +9,6 @@ function Ethics() {
             <Header />
             <section className="services section bd-container services__content" id="services">
                 <h2 className="section-title">Medical Ethics</h2>
-                <p />
                 <span className="section-sub">Effective May 1, 2021</span>
                 <br />
                 The greatest ethical imperative for the physician is the welfare of the patient.

@@ -87,7 +87,7 @@ function Register() {
                                 Do you just like this page? Anyway we got you covered with
                                 the button below. Hit it and get in
                             </p>
-                            <Link to='/login'><button className="btn transparent" id="sign-in-btn">
+                            <Link to='/login'><button className="btn" id="sign-in-btn">
                                 Login
                             </button></Link>
                         </div>

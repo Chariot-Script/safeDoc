@@ -3,13 +3,14 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-  --header-height: 3rem;
+  --header-height: 1rem;
 
   /*========== Colors ==========*/
   --first-color: #04befe;
   --first-color-alt: #4481eb;
   --first-color-send: #4d84e2;
   --text-color: #707070;
+  --title-color: #505050;
   --text-color-light: #a6a6a6;
   --body-color: #fbfefd;
   --input-color: #f0f0f0;
@@ -115,6 +116,10 @@ img {
 .bd-grid {
   display: grid;
   gap: 1.5rem;
+}
+
+.services__content {
+  text-align: justify !important;
 }
 
 /*========== MEDIA QUERIES ==========*/

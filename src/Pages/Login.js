@@ -33,10 +33,10 @@ function Login() {
                             </button>
                             <p className="social-text">Or Login in with any of these social platforms</p>
                             <div className="social-media">
-                                <Link to="#" classNameName="social-icon">
+                                <Link to="#" className="social-icon">
                                     <FaFacebookF />
                                 </Link>
-                                <Link to="#" classNameName="social-icon">
+                                <Link to="#" className="social-icon">
                                     <FaGoogle />
                                 </Link>
                             </div>
@@ -51,7 +51,7 @@ function Login() {
                             <p>
                                 Welcome aboard! Hit the button below and lets set you up real quick
                             </p>
-                            <Link to="/register"><button className="btn transparent" id="sign-up-btn">
+                            <Link to="/register"><button className="btn" id="sign-up-btn">
                                 Sign up
                             </button></Link>
                         </div>

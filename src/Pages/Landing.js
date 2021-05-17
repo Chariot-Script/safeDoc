@@ -26,7 +26,7 @@ function Landing() {
                             </button></Link>
                         </div>
 
-                        <img src="assets/img/home.png" alt="" className="home__img" />
+                        <img src={'../Images/home.png'}  alt="home" className="home__img" />
                     </div>
                 </section>
 
@@ -48,7 +48,7 @@ function Landing() {
                             </p>
                         </div>
 
-                        <img src="assets/img/about.jpg" alt="" className="about__img" />
+                        <img src={'../Images/about.jpg'} alt="" className="about__img" />
                     </div>
                 </section>
 
@@ -98,7 +98,7 @@ function Landing() {
                             </div>
                         </div>
 
-                        <img src="assets/img/movil-app.png" alt="" className="app__img" />
+                        <img src={'../Images/movil-app.png'} alt="" className="app__img" />
                     </div>
                 </section>
 

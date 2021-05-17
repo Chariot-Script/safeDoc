@@ -12,9 +12,9 @@ function Register() {
     const passwordRef = useRef()
     const confrimPasswordlRef = useRef()
     const { register, currentUser } = useAuth
-    const [error, setError] = useState('')
-    // const [success, setSuccess] = useState('')
-    const [loading, setLoading] = useState(false)
+    const [ error, setError ] = useState('')
+    // const [ success, setSuccess ] = useState('')
+    const [ loading, setLoading ] = useState(false)
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -27,7 +27,6 @@ function Register() {
             setError('')
             setLoading(true)
             await register(emailRef.current.value, passwordRef.current.value)
-            console.log(currentUser);
             // setSuccess('Account created successfully')
         } catch {
             setError('Failed to create an account')

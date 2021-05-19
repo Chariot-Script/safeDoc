@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserAccountDropDown from '../Components/UserAccountDropDown'
 
 import './Header.css';
 
@@ -13,11 +14,12 @@ function Header() {
 
                 <div className="nav__menu" id="nav-menu">
                     <ul className="nav__list">
-                    <li><Link to="/pharmacy" className="nav__item nav__link">Pharmacy</Link></li>
-                    <li><Link to="/contact" className="nav__item nav__link">Contact us</Link></li>
+                        <li><Link to="/pharmacy" className="nav__item nav__link">Pharmacy</Link></li>
+                        <li><Link to="/contact" className="nav__item nav__link">Contact us</Link></li>
                         <li><Link to="/login" className="nav__item nav__link">Login</Link></li>
                         <li><Link to="/register" className="nav__item nav__link">Sign up</Link></li>
                     </ul>
+                    <UserAccountDropDown />
                 </div>
 
                 <div className="nav__toggle" id="nav-toggle">

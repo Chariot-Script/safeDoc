@@ -13,8 +13,8 @@ function Contact() {
                 </nav>
             </header>
 
-            <div className="container">
-                <div className="forms-container">
+            <div className="register__container">
+                <div className="forms_container">
                     <div className="signin-signup">
                         <form action="#" className="sign-in-form">
                             <h2>Contact us</h2>
@@ -41,9 +41,9 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className="panels-container">
-                    <div className="panel left-panel">
-                        <div className="content">
+                <div className="panels__container">
+                    <div className="register__panel left__panel">
+                        <div className="register__content">
                             <h3>Let's get in touch</h3>
                             <p>
                                 "Examine what is said, not him who speaks and Just

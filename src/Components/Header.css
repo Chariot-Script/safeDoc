@@ -56,7 +56,7 @@
 }
 
 .nav__logo:hover{
-  color: var(--first-color-alt);
+  color: var(--first-color-send);
 }
 
 .nav__link{

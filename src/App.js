@@ -4,6 +4,9 @@ import Landing from './Pages/Landing';
 import Pharmacy from './Pages/Pharmacy';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
+import Profile from './Pages/Profile';
+import Orders from './Pages/Orders';
+import Favourites from './Pages/Favourites';
 import Contact from './Pages/Contact';
 import Ethics from './Pages/Ethics';
 import Privacy from './Pages/Privacy';
@@ -12,7 +15,6 @@ import { AuthProvider } from './Contexts/AuthContext';
 
 
 function App() {
-    //  init firebase
     return (
         <Router>
             <div className="app">
@@ -22,6 +24,9 @@ function App() {
                         <Route path="/pharmacy" component={Pharmacy} />
                         <Route path="/login" component={Login} />
                         <Route path="/register" component={Register} />
+                        <Route path="/profile" component={Profile} />
+                        <Route path="/order" component={Orders} />
+                        <Route path="/favourite" component={Favourites} />
                         <Route path="/contact" component={Contact} />
                         <Route path="/ethics" component={Ethics} />
                         <Route path="/terms" component={Terms} />

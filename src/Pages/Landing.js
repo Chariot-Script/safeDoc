@@ -16,11 +16,11 @@ function Landing() {
                     <div className="home__container bd-container bd-grid">
                         <div className="home__data">
                             <h2 className="home__subtitle">We are thinking,<br /> "Health First"</h2>
-                            <p >It’s <b>easier</b> to <b>access</b> your
-                                <b>doctor</b> or <b>medical</b> records this way and keep up with your
-                                <b>medical health</b>. The worst case scenario is dying alone when
+                            <p >It’s <b>easier</b> to <b>access</b> your<b> doctor</b> or <b>medical
+                                </b> records this way. The worst case scenario is dying alone when
                                 you can <b>access medical</b> attention right <b>where you are</b>.
                             </p>
+                            <br />
                             <Link to="./register"><button className="btn">
                                 Get Started
                             </button></Link>

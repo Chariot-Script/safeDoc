@@ -41,7 +41,7 @@
 }
 
 .footer__link:hover {
-  color: var(--first-color-alt);
+  color: var(--first-color-send);
 }
 
 .footer__copy {

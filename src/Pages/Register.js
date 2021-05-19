@@ -42,14 +42,14 @@ function Register() {
                 </nav>
             </header>
 
-            <div className="container">
-                <div className="forms-container">
+            <div className="register__container">
+                <div className="forms__container">
                     <div className="signin-signup">
                         {currentUser && console.log(currentUser.email)}
                         {error && console.log(error)}
                         {/* {success && console.log(success)} */}
                         <form onSubmit={handleSubmit} className="sign-in-form">
-                            <h2 className="title">Sign up</h2>
+                            <h2 className="register__title">Sign up</h2>
                             <div className="input-field">
                                 <FaUserAlt />
                                 <input type="email" ref={emailRef} required placeholder="Email" />
@@ -78,9 +78,9 @@ function Register() {
                     </div>
                 </div>
 
-                <div className="panels-container">
-                    <div className="panel left-panel">
-                        <div className="content">
+                <div className="panels__container">
+                    <div className="register__panel left__panel">
+                        <div className="register__content">
                             <h3>One of us?</h3>
                             <p>
                                 If you are one of us then I wonder what brought you here again.

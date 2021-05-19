@@ -8,7 +8,7 @@
   /*========== Colors ==========*/
   --first-color: #04befe;
   --first-color-alt: #4481eb;
-  --first-color-send: #4d84e2;
+  --first-color-send: #003147;
   --text-color: #707070;
   --title-color: #505050;
   --text-color-light: #a6a6a6;
@@ -97,7 +97,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: var(--first-color-alt);
+  color: var(--first-color-send);
 }
 
 img {

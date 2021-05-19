@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Details from '../Components/Details'
 
-
 import './Card.css'
+
 
 function Card() {
 
@@ -33,9 +33,9 @@ function Card() {
                                 Details
                             </button>
                         </Link>
-                        <Link to="./cart">
+                        <Link to="./order">
                             <button className="btn">
-                                Add to cart
+                                Add to Bag
                             </button>
                         </Link>
                     </div>

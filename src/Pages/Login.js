@@ -15,11 +15,11 @@ function Login() {
                 </nav>
             </header>
 
-            <div className="container">
-                <div className="forms-container">
+            <div className="login__container">
+                <div className="forms__container">
                     <div className="signin-signup">
                         <form action="#" className="sign-in-form">
-                            <h2 className="title">Login</h2>
+                            <h2 className="login__title">Login</h2>
                             <div className="input-field">
                                 <FaUserAlt />
                                 <input type="email" placeholder="Email" />
@@ -44,9 +44,9 @@ function Login() {
                     </div>
                 </div>
 
-                <div className="panels-container">
-                    <div className="panel left-panel">
-                        <div className="content">
+                <div className="panels__container">
+                    <div className="login__panel left__panel">
+                        <div className="login__content">
                             <h3>New here?</h3>
                             <p>
                                 Welcome aboard! Hit the button below and lets set you up real quick

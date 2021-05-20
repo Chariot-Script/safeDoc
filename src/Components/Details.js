@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaStar, FaUserAlt } from "react-icons/fa"
+import { FaStar } from "react-icons/fa"
 
 import './Details.css'
 
@@ -15,7 +15,7 @@ function Details() {
 
     return (
         <div id="popup">
-            <div class="popup-content">
+            <div className="popup-content">
                 {/* ========== ABOUT ========== */}
                 <div className="about__container  bd-grid">
                     <div className="about__data">
@@ -31,10 +31,6 @@ function Details() {
                             <FaStar />
                             <FaStar />
                         </div>
-                        <div className="input-field">
-                                <FaUserAlt />
-                                <input type="email" placeholder="Email" />
-                            </div>
 
                         <h2 className="product__price">$40.<small>99</small></h2>
                         <Link to='/favourite'>
@@ -52,7 +48,7 @@ function Details() {
                     <img src={'../Images/capsule.png'} alt="" className="details__img" />
                 </div>
             </div>
-            <Link class="close" onClick={handleClick}><img src={'../Images/close.png'} alt="" /></Link>
+            <Link className="close" onClick={handleClick}><img src={'../Images/close.png'} alt="" /></Link>
         </div>
     )
 }

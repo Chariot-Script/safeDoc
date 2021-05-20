@@ -8,9 +8,9 @@ function Privacy() {
     return (
         <div>
             <Header />
-            <section class="services section bd-container services__content" id="services">
-                <h2 class="section-title">Privacy Policy</h2>
-                <span class="section-sub">Effective May 1, 2021</span>
+            <section className="services section bd-container services__content" id="services">
+                <h2 className="section-title">Privacy Policy</h2>
+                <span className="section-sub">Effective May 1, 2021</span>
                 <br />
                 Please note that by accepting our Terms of Service and using this
                 website (the “Site”) or the services provided by safeDoc (“Company”,
@@ -34,7 +34,7 @@ function Privacy() {
                 will not be able to provide you with the functions or services through our Site.
                 <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     1. Purpose
             </h3>
             We recognize that when you provide us with information about yourself that
@@ -45,14 +45,14 @@ function Privacy() {
             the Site and our services. Please read this Privacy Policy carefully.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     2. Information collected and how it is used
             </h3>
             The following describes the types of Personal Information and other information
             the Company may collect about you, and how the Company may use and maintain that
             information, including, but not limited to:
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.1 Registration.
             </h5>
             Before you can utilize certain services that we offer on the
@@ -64,7 +64,7 @@ function Privacy() {
             about you as long as reasonably necessary for us to complete our dealings with
             you, or as may be required by law.
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.2 Forms.
             </h5>
             To fully utilize the services we offer, you may be required to fill out
@@ -72,7 +72,7 @@ function Privacy() {
             telephone number, account information, health status and other information
             relevant to your health, diagnosis and treatment.
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.3 Medical Information.
             </h5>
             In order for medical professionals to give medical opinions
@@ -82,7 +82,7 @@ function Privacy() {
             we endeavour to de-link /render anonymous your Personal Information like name, phone,
             email etc., from your medical records on a monthly basis.
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.4 Correspondence.
             </h5>
             If you correspond with us via email, we may gather in a file specific
@@ -91,7 +91,7 @@ function Privacy() {
             long as reasonably necessary for us to complete our dealings with you, or as may be
             required by law.
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.5 URL and IP addresses.
             </h5>
             Company collects information about users’ utilization and navigation
@@ -101,7 +101,7 @@ function Privacy() {
             your IP address to help diagnose problems with our server and to administer our Site.
             Your IP address also is used to help identify you and to gather broad demographic information.
             <br />
-                <h5 class="services__subtitle">
+                <h5 className="services__subtitle">
                     2.6 Information Collected With Cookies.
             </h5>
             Company uses cookies on certain pages of our Site.
@@ -125,7 +125,7 @@ function Privacy() {
             service. Any specific name is always anonymized automatically.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     3. Information disclosure and usage
             </h3>
             Company will not share, rent, sell or otherwise disclose any of the Personal
@@ -171,7 +171,7 @@ function Privacy() {
             sole and absolute discretion, deem necessary or appropriate.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     4. Security measures employed by the Site
             </h3>
             Our Site requires users to give us unique identifiers in order to log into
@@ -194,7 +194,7 @@ function Privacy() {
             can be guaranteed to be 100% secure.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     5. Accessing, updating, or making corrections to information
             </h3>
             You may access, correct or update Personal Information collected about you by
@@ -213,7 +213,7 @@ function Privacy() {
             why.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     6. Linked sites and third-party sites
             </h3>
             This Privacy Policy only addresses the use and disclosure of Personal Information
@@ -224,7 +224,7 @@ function Privacy() {
             interacting with any website.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     7. Changes to this Privacy Policy
             </h3>
             Your continued use of the Site and our services following an update or change
@@ -234,7 +234,7 @@ function Privacy() {
             periodically so that you will be apprised of any changes.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     8. Age restriction
             </h3>
             We do not knowingly collect or maintain Personal Information from persons
@@ -249,18 +249,18 @@ function Privacy() {
             request that we delete that child’s Personal Information from our systems.
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     9. Contacting us or email concerning privacy policy
             </h3>
             If you have any questions about this Privacy Policy, you may contact us through
             <br />
                 <br />
-                <div class="footer__content">
-                    <h3 class="services__title">Address</h3>
+                <div className="footer__content">
+                    <h3 className="services__title">Address</h3>
                     <ul>
-                        <li><BiMap class='footer__social bx bxs-map'></BiMap>P.O.Box 385, Mukono, Uganda</li>
-                        <li><BiEnvelope class='footer__social bx bxs-envelope'></BiEnvelope><a href="mailto:aquacresinfo@gmail.com">aquacresinfo@gmail.com</a></li>
-                        <li><BiPhoneCall class='footer__social bx bxs-phone'></BiPhoneCall>+256 779 406 738</li>
+                        <li><BiMap className='footer__social bx bxs-map'></BiMap>P.O.Box 385, Mukono, Uganda</li>
+                        <li><BiEnvelope className='footer__social bx bxs-envelope'></BiEnvelope><a href="mailto:aquacresinfo@gmail.com">aquacresinfo@gmail.com</a></li>
+                        <li><BiPhoneCall className='footer__social bx bxs-phone'></BiPhoneCall>+256 779 406 738</li>
                     </ul>
                 </div>
                 <br />
@@ -271,7 +271,7 @@ function Privacy() {
             info@safedoc.com;
             <br />
                 <br />
-                <h3 class="services__title">
+                <h3 className="services__title">
                     10. Additional Information About This Privacy Policy:
             </h3>
             The policies indicated in this Privacy Policy will remain effective, even if the
@@ -280,7 +280,7 @@ function Privacy() {
             as required by law or regulation.
             <br />
                 <br />
-            <span class="section-sub">Privacy Policy (May 1, 2021)</span>
+            <span className="section-sub">Privacy Policy (May 1, 2021)</span>
             </section>
             <Footer />
         </div>

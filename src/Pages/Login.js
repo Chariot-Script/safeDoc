@@ -1,12 +1,30 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 import Footer from '../Components/Footer';
+import { auth } from '../Sevices/Firebase'
 import { FaFacebookF, FaGoogle, FaUserAlt, FaLock } from "react-icons/fa";
 
 import './Login.css';
 
 
 function Login() {
+    const history = useHistory();
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const login = e => {
+        e.preventDefault();
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then((auth) => {
+                if (auth) {
+                    history.push("/pharmacy");
+                }
+            })
+            .catch((error) => alert(error.message));
+    }
+
+
     return (
         <div>
             <header className="l-header" id="header">
@@ -18,15 +36,17 @@ function Login() {
             <div className="login__container">
                 <div className="forms__container">
                     <div className="signin-signup">
-                        <form action="#" className="sign-in-form">
+                        <form onSubmit={login} className="sign-in-form">
                             <h2 className="login__title">Login</h2>
                             <div className="input-field">
                                 <FaUserAlt />
-                                <input type="email" placeholder="Email" />
+                                <input type="email" value={email}
+                                    onChange={(e) => setEmail(e.target.value)} required placeholder="Email" />
                             </div>
                             <div className="input-field">
                                 <FaLock />
-                                <input type="password" placeholder="Password" />
+                                <input type="password" value={password}
+                                    onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
                             </div>
                             <button className="btn" id="sign-up-btn">
                                 Login

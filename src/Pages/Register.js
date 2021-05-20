@@ -1,37 +1,33 @@
-import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../Components/Footer';
-import { useAuth } from '../Contexts/AuthContext';
-import { FaFacebookF, FaGoogle, FaUserAlt, FaLock } from "react-icons/fa";
+import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import Footer from '../Components/Footer'
+import { auth } from '../Sevices/Firebase'
+import { FaFacebookF, FaGoogle, FaUserAlt, FaLock } from "react-icons/fa"
 
 import './Register.css';
 
 
 function Register() {
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const confrimPasswordlRef = useRef()
-    const { register, currentUser } = useAuth
-    const [ error, setError ] = useState('')
-    // const [ success, setSuccess ] = useState('')
-    const [ loading, setLoading ] = useState(false)
+    const history = useHistory();
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const [error, setError] = useState('')
 
-    async function handleSubmit(e) {
-        e.preventDefault()
-
-        if (passwordRef.current.value !== confrimPasswordlRef.current.value) {
-            return setError('Passwords do not match')
+    const register = e => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            return alert('Passwords do not match')
         }
-
         try {
             setError('')
-            setLoading(true)
-            await register(emailRef.current.value, passwordRef.current.value)
-            // setSuccess('Account created successfully')
+            auth.createUserWithEmailAndPassword(email, password)
+            if (auth) {
+                history.push("/profile");
+            }
         } catch {
-            setError('Failed to create an account')
+            error(alert(error.message))
         }
-        setLoading(false)
     }
 
     return (
@@ -45,24 +41,24 @@ function Register() {
             <div className="register__container">
                 <div className="forms__container">
                     <div className="signin-signup">
-                        {currentUser && console.log(currentUser.email)}
-                        {error && console.log(error)}
-                        {/* {success && console.log(success)} */}
-                        <form onSubmit={handleSubmit} className="sign-in-form">
+                        <form onSubmit={register} className="sign-in-form">
                             <h2 className="register__title">Sign up</h2>
                             <div className="input-field">
                                 <FaUserAlt />
-                                <input type="email" ref={emailRef} required placeholder="Email" />
+                                <input type="email" value={email}
+                                    onChange={(e) => setEmail(e.target.value)} required placeholder="Email" />
                             </div>
                             <div className="input-field">
                                 <FaLock />
-                                <input type="password" ref={passwordRef} required placeholder="Password" />
+                                <input type="password" value={password}
+                                    onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
                             </div>
                             <div className="input-field">
                                 <FaLock />
-                                <input type="password" ref={confrimPasswordlRef} required placeholder="Confirm Password" />
+                                <input type="password" value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)} required placeholder="Confirm Password" />
                             </div>
-                            <button disabled={loading} className="btn" id="sign-up-btn">
+                            <button className="btn" id="sign-up-btn">
                                 Sign up
                             </button>
                             <p className="social-text">Or Sign in with any of these social platforms</p>

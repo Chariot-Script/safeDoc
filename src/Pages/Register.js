@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import { auth } from '../Sevices/Firebase'
-import { FaFacebookF, FaGoogle, FaUserAlt, FaLock } from "react-icons/fa"
+import { FaUserAlt, FaLock } from "react-icons/fa"
 
 import './Register.css';
 
@@ -32,16 +33,11 @@ function Register() {
 
     return (
         <div>
-            <header className="l-header" id="header">
-                <nav className="nav bd-container">
-                    <Link to="/" className="nav__logo">SafeDoc</Link>
-                </nav>
-            </header>
-
+            <Header />
             <div className="register__container">
                 <div className="forms__container">
                     <div className="signin-signup">
-                        <form onSubmit={register} className="sign-in-form">
+                        <form onSubmit={register} className="sign-in-form" id='register__form'>
                             <h2 className="register__title">Sign up</h2>
                             <div className="input-field">
                                 <FaUserAlt />
@@ -61,7 +57,7 @@ function Register() {
                             <button className="btn" id="sign-up-btn">
                                 Sign up
                             </button>
-                            <p className="social-text">Or Sign in with any of these social platforms</p>
+                            {/* <p className="social-text">Or Sign in with any of these social platforms</p>
                             <div className="social-media">
                                 <Link to="#" className="social-icon">
                                     <FaFacebookF />
@@ -69,7 +65,7 @@ function Register() {
                                 <Link to="#" className="social-icon">
                                     <FaGoogle />
                                 </Link>
-                            </div>
+                            </div> */}
                         </form>
                     </div>
                 </div>

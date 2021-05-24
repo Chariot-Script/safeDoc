@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { FaUserAlt, FaPhone, FaEnvelope, FaFile } from "react-icons/fa";
 
@@ -7,12 +7,7 @@ import { FaUserAlt, FaPhone, FaEnvelope, FaFile } from "react-icons/fa";
 function Contact() {
     return (
         <div>
-            <header className="l-header" id="header">
-                <nav className="nav bd-container">
-                    <Link to="/" className="nav__logo">SafeDoc</Link>
-                </nav>
-            </header>
-
+            <Header />
             <div className="register__container">
                 <div className="forms_container">
                     <div className="signin-signup">

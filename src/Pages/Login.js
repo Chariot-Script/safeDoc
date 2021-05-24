@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
+import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import { auth } from '../Sevices/Firebase'
-import { FaFacebookF, FaGoogle, FaUserAlt, FaLock } from "react-icons/fa";
+import { FaUserAlt, FaLock } from "react-icons/fa";
 
 import './Login.css';
 
@@ -14,8 +15,7 @@ function Login() {
 
     const login = e => {
         e.preventDefault();
-        auth
-            .signInWithEmailAndPassword(email, password)
+        auth.signInWithEmailAndPassword(email, password)
             .then((auth) => {
                 if (auth) {
                     history.push("/pharmacy");
@@ -24,15 +24,9 @@ function Login() {
             .catch((error) => alert(error.message));
     }
 
-
     return (
         <div>
-            <header className="l-header" id="header">
-                <nav className="nav bd-container">
-                    <Link to="/" className="nav__logo">SafeDoc</Link>
-                </nav>
-            </header>
-
+            <Header />
             <div className="login__container">
                 <div className="forms__container">
                     <div className="signin-signup">
@@ -51,15 +45,15 @@ function Login() {
                             <button className="btn" id="sign-up-btn">
                                 Login
                             </button>
-                            <p className="social-text">Or Login in with any of these social platforms</p>
+                            {/* <p className="social-text">Or Login in with any of these social platforms</p>
                             <div className="social-media">
-                                <Link to="#" className="social-icon">
+                                <Link className="social-icon">
                                     <FaFacebookF />
                                 </Link>
-                                <Link to="#" className="social-icon">
+                                <Link className="social-icon">
                                     <FaGoogle />
                                 </Link>
-                            </div>
+                            </div> */}
                         </form>
                     </div>
                 </div>

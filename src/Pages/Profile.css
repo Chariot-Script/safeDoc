@@ -1,19 +1,18 @@
 @charset "UTF-8";
 
-.container {
+.profile__container {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    min-height: 1000px;
     background: #fff;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    transform: translate(20%, -5%);
+    transform: translate(20%, 10%);
   
 }
 
-.container .left__side {
+.profile__container .left__side {
     position: relative;
     background: #003147;
     padding: 40px
@@ -30,8 +29,8 @@
 
 .profileText .imageBox {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -94,10 +93,10 @@
     font-weight: 300;
 }
 
-.container .right__side {
+.profile__container .right__side {
     position: relative;
     background: #fff;
-    padding: 40px
+    padding: 40px;
 }
 
 .about {

@@ -1,22 +1,13 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react"
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
-import CheckoutProduct from '../Components/CheckoutProduct'
+import CheckoutClient from '../Components/CheckoutClient'
 import { useStateValue } from "../Contexts/StateProvider"
-import { db } from '../Sevices/Firebase'
 
 import './Checkout.css'
 
 
-function Orders() {
-    const [{ user }] = useStateValue();
-    const [orders, setOrders] = useState([]);
-
-    useEffect(() => {
-        db.collection("users").doc(user?.uid).collection("doctors").get()
-            .then(snapshot => { setOrders(snapshot.docs); console.log(snapshot.docs); })
-            
-    }, []);
+function Clients() {
 
     return (
         <Fragment className='container'>
@@ -24,7 +15,7 @@ function Orders() {
             <div className="checkout">
                 <div className="checkout__left">
                     <div>
-                        <h2 className="checkout__title">Your Orders</h2>
+                        <h2 className="checkout__title">Client Requests</h2>
                     </div>
                     <FinalProducts />
                 </div>
@@ -40,7 +31,7 @@ const FinalProducts = () => {
     return (
         <Fragment>
             {basket.map((item) => (
-                <CheckoutProduct
+                <CheckoutClient
                     id={item.id}
                     price={item.price}
                     rating={item.rating}
@@ -52,4 +43,4 @@ const FinalProducts = () => {
     );
 };
 
-export default Orders
+export default Clients

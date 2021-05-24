@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BiMap, BiEnvelope, BiPhoneCall } from "react-icons/bi";
 
-
 import './Footer.css';
 
 

@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa"
 import './Details.css'
 
 
-function Details() {
+function Details({ title, description, rating, price, image }) {
 
     function handleClick(e) {
         e.preventDefault();
@@ -19,20 +19,18 @@ function Details() {
                 {/* ========== ABOUT ========== */}
                 <div className="about__container  bd-grid">
                     <div className="about__data">
-                        <h2 className="section-title about__initial">Purple and White Capsules 500mg</h2>
-                        <p className="details__description">SafeDoc is a system that allows you to
-                        request for medical attention in case of an emergency. Medical
-                        practitioners within your area can come in to help in a timely
-                        manner other than waiting for hours to be attended to.
-                        </p>
+                        <h2 className="section-title about__initial">{title}</h2>
+                        <p className="details__description">{description}</p>
                         <br />
                         <div className="product__rating">
-                            <FaStar />
-                            <FaStar />
-                            <FaStar />
+                            {Array(rating)
+                                .fill()
+                                .map((rate) => (
+                                    <FaStar />
+                                ))}
                         </div>
 
-                        <h2 className="product__price">$40.<small>99</small></h2>
+                        <h2 className="product__price">{price}</h2>
                         <Link to='/favourite'>
                             <button className="btn">
                                 Add to favourites
@@ -45,7 +43,7 @@ function Details() {
                         </Link>
                     </div>
 
-                    <img src={'../Images/capsule.png'} alt="" className="details__img" />
+                    <img src={image} alt="" className="details__img" />
                 </div>
             </div>
             <Link className="close" onClick={handleClick}><img src={'../Images/close.png'} alt="" /></Link>

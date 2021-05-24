@@ -1,43 +1,50 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useStateValue } from '../Contexts/StateProvider'
 import Details from '../Components/Details'
+import { FaStar } from "react-icons/fa"
 
 import './Card.css'
 
 
-function Card() {
+function Card({ id, title, description, price, image, rating }) {
+    const [{user}, dispatch] = useStateValue();
 
-    function handleClick(e) {
-        e.preventDefault();
-        console.log('The link was clicked.');
-        const popup = document.getElementById('popup');
-        popup.classList.toggle('active')
-    }
+    const addToBasket = () => {
+        dispatch({
+            type: "ADD_TO_BASKET",
+            item: {
+                id,
+                title,
+                image,
+                price,
+                rating,
+            },
+        });
+        alert('Item added to basket');
+    };
 
     return (
         <div>
             <Details />
             <div className="card">
                 <div className="imgBx">
-                    <img src={'../Images/capsule.png'} alt="" />
+                    <img src={image} alt="" />
                 </div>
                 <div className="contentBx">
-                    <h3>Purple and White Capsules</h3>
-                    <p className="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae!
-                    </p>
-                    <h2 className="price">$40.<small>99</small></h2>
+                    <h3>{title}</h3>
+                    <p className="description">{description}</p>
+                    <h2 className="price">{price}</h2>
+                    <div className="product__rating">
+                        {Array(rating)
+                            .fill()
+                            .map((rate) => (
+                                <FaStar />
+                            ))}
+                    </div>
                     <div className="contact__button">
-                        <Link to="./details">
-                            <button className="btn" onClick={handleClick}>
-                                Details
-                            </button>
-                        </Link>
-                        <Link to="./order">
-                            <button className="btn">
-                                Add to Bag
-                            </button>
-                        </Link>
+                        <button className="btn" onClick={addToBasket} >
+                            Add to Basket
+                        </button>
                     </div>
                 </div>
             </div>

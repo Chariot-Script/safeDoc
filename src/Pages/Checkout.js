@@ -1,22 +1,14 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment } from "react"
+import Subtotal from '../Components/Subtotal'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import CheckoutProduct from '../Components/CheckoutProduct'
 import { useStateValue } from "../Contexts/StateProvider"
-import { db } from '../Sevices/Firebase'
 
 import './Checkout.css'
 
 
-function Orders() {
-    const [{ user }] = useStateValue();
-    const [orders, setOrders] = useState([]);
-
-    useEffect(() => {
-        db.collection("users").doc(user?.uid).collection("doctors").get()
-            .then(snapshot => { setOrders(snapshot.docs); console.log(snapshot.docs); })
-            
-    }, []);
+function Checkout() {
 
     return (
         <Fragment className='container'>
@@ -24,9 +16,12 @@ function Orders() {
             <div className="checkout">
                 <div className="checkout__left">
                     <div>
-                        <h2 className="checkout__title">Your Orders</h2>
+                        <h2 className="checkout__title">Your Shopping Basket</h2>
                     </div>
                     <FinalProducts />
+                </div>
+                <div className="checkout__right">
+                    <Subtotal />
                 </div>
             </div>
             <Footer />
@@ -52,4 +47,4 @@ const FinalProducts = () => {
     );
 };
 
-export default Orders
+export default Checkout

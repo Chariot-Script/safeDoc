@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.checkoutProduct {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .checkoutProduct__info {
+    padding-left: 20px;
+  }
+
+  .checkoutProduct__image {
+    object-fit: contain;
+    height: 180px;
+    width: 180px;
+  }
+
+  .checkoutProduct__rating {
+    display: flex;
+  }
+  
+  .checkoutProduct__title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  .checkoutProduct__content {
+    font-size: 17px;
+  }
+  
